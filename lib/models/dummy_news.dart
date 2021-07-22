@@ -18,6 +18,7 @@ const DUMMY_NEWS = const [
         1.10.32.''',
     imageURL:
         'https://sanjibsinha.com/wp-content/uploads/2021/07/Can-you-code-in-WordPress-How-do-I-learn-WordPress-coding-.jpg',
+    nature: Nature.Crime,
   ),
   News(
     id: 'b2',
@@ -36,6 +37,7 @@ const DUMMY_NEWS = const [
         1.10.32.''',
     imageURL:
         'https://sanjibsinha.com/wp-content/uploads/2021/06/What-is-toList-flutter-What-is-map-in-Dart-.jpg',
+    nature: Nature.Entertaining,
   ),
   News(
     id: 'b3',
@@ -54,6 +56,7 @@ const DUMMY_NEWS = const [
         1.10.32.''',
     imageURL:
         'https://sanjibsinha.com/wp-content/uploads/2021/04/characters-packagae-flutter.jpg',
+    nature: Nature.Hard,
   ),
   News(
     id: 'b4',
@@ -70,7 +73,9 @@ const DUMMY_NEWS = const [
       very popular during the Renaissance. The first line of Lorem Ipsum,
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
-    imageURL: '',
+    imageURL:
+        'https://sanjibsinha.com/wp-content/uploads/2021/04/characters-packagae-flutter.jpg',
+    nature: Nature.Political,
   ),
   News(
     id: 'b5',
@@ -89,6 +94,7 @@ const DUMMY_NEWS = const [
         1.10.32.''',
     imageURL:
         'https://sanjibsinha.com/wp-content/uploads/2021/04/data-type-php.jpg',
+    nature: Nature.Entertaining,
   ),
   News(
     id: 'b6',
@@ -107,5 +113,6 @@ const DUMMY_NEWS = const [
         1.10.32.''',
     imageURL:
         'https://sanjibsinha.com/wp-content/uploads/2021/04/associative-array-in-php.jpg',
+    nature: Nature.Political,
   ),
 ];
