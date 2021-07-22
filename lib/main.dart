@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/views/first_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(FirstPage());
 }
 
 class MyApp extends StatelessWidget {
