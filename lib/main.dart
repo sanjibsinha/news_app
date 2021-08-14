@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../views/tabs_screen.dart';
 import '../views/category_news_screen.dart';
 import '../views/news_detail_screen.dart';
 import '../views/categories_screen.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Daily News',
       theme: ThemeData(
         primarySwatch: Colors.pink,
-        primaryColor: Colors.amber,
+        primaryColor: Colors.blue,
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         textTheme: ThemeData.light().textTheme.copyWith(
             bodyText2: const TextStyle(
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(),
       initialRoute: '/', // default is '/'
       routes: {
-        '/': (ctx) => const CategoriesScreen(),
+        '/': (ctx) => TabsScreen(),
         CategoryNewsScreen.routeName: (ctx) => const CategoryNewsScreen(),
         NewsDetailScreen.routeName: (ctx) => const NewsDetailScreen(),
       },
