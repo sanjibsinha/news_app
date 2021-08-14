@@ -1,67 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/views/first_page.dart';
+import '../views/category_news_screen.dart';
+import '../views/news_detail_screen.dart';
+import '../views/categories_screen.dart';
 
-void main() {
-  runApp(FirstPage());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Daily News',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+        primarySwatch: Colors.pink,
+        primaryColor: Colors.amber,
+        canvasColor: const Color.fromRGBO(255, 254, 229, 1),
+        textTheme: ThemeData.light().textTheme.copyWith(
+            bodyText2: const TextStyle(
+              color: Color.fromRGBO(20, 51, 51, 1),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            bodyText1: const TextStyle(
+              color: Color.fromRGBO(20, 51, 51, 1),
             ),
-          ],
-        ),
+            headline6: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            )),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // home: CategoriesScreen(),
+      initialRoute: '/', // default is '/'
+      routes: {
+        '/': (ctx) => const CategoriesScreen(),
+        CategoryNewsScreen.routeName: (ctx) => const CategoryNewsScreen(),
+        NewsDetailScreen.routeName: (ctx) => const NewsDetailScreen(),
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (ctx) => const CategoriesScreen(),
+        );
+      },
     );
   }
 }

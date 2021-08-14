@@ -1,9 +1,67 @@
-import 'package:news_app/models/news.dart';
+import 'package:flutter/material.dart';
+import 'models/category.dart';
+import 'models/news.dart';
 
-const DUMMY_NEWS = const [
+const dummyCategories = [
+  Category(
+    id: 'c1',
+    title: 'Health',
+    color: Colors.red,
+  ),
+  Category(
+    id: 'c2',
+    title: 'Wellness',
+    color: Colors.deepOrange,
+  ),
+  Category(
+    id: 'c3',
+    title: 'Politics',
+    color: Colors.black54,
+  ),
+  Category(
+    id: 'c4',
+    title: 'Travel',
+    color: Colors.green,
+  ),
+  Category(
+    id: 'c5',
+    title: 'Internet',
+    color: Colors.yellow,
+  ),
+  Category(
+    id: 'c6',
+    title: 'Lifestyle',
+    color: Colors.indigo,
+  ),
+  Category(
+    id: 'c7',
+    title: 'Headlines',
+    color: Colors.pink,
+  ),
+  Category(
+    id: 'c8',
+    title: 'Sports',
+    color: Colors.orange,
+  ),
+  Category(
+    id: 'c9',
+    title: 'Science',
+    color: Colors.blueAccent,
+  ),
+  Category(
+    id: 'c10',
+    title: 'Environemnt',
+    color: Colors.redAccent,
+  ),
+];
+
+const dummyNews = [
   News(
     id: 'b1',
-    categories: ['c1', 'c4'],
+    categories: [
+      'c1',
+      'c4',
+    ],
     title: 'Global Worming fuels disaster',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -17,12 +75,15 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/07/Can-you-code-in-WordPress-How-do-I-learn-WordPress-coding-.jpg',
-    nature: Nature.Crime,
+        'https://cdn.pixabay.com/photo/2021/07/12/19/43/swans-6421355_960_720.jpg',
+    nature: Nature.hard,
   ),
   News(
     id: 'b2',
-    categories: ['c2', 'c3'],
+    categories: [
+      'c2',
+      'c3',
+    ],
     title: 'What a brief jog can do to your brain',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -36,12 +97,15 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/06/What-is-toList-flutter-What-is-map-in-Dart-.jpg',
-    nature: Nature.Entertaining,
+        'https://cdn.pixabay.com/photo/2020/05/15/14/03/lake-5173683_960_720.jpg',
+    nature: Nature.soft,
   ),
   News(
     id: 'b3',
-    categories: ['c7', 'c6'],
+    categories: [
+      'c7',
+      'c6',
+    ],
     title: 'Ten tips that will stay you fit',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -55,12 +119,15 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/04/characters-packagae-flutter.jpg',
-    nature: Nature.Hard,
+        'https://cdn.pixabay.com/photo/2021/07/26/22/04/sea-shell-6495338_960_720.jpg',
+    nature: Nature.hard,
   ),
   News(
     id: 'b4',
-    categories: ['c8', 'c10'],
+    categories: [
+      'c8',
+      'c10',
+    ],
     title: 'Health tips for the older guys',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -74,12 +141,15 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/04/characters-packagae-flutter.jpg',
-    nature: Nature.Political,
+        'https://cdn.pixabay.com/photo/2021/07/12/19/43/swans-6421355_960_720.jpg',
+    nature: Nature.soft,
   ),
   News(
     id: 'b5',
-    categories: ['c1', 'c5'],
+    categories: [
+      'c1',
+      'c5',
+    ],
     title: 'Take more outdoor walks',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -93,12 +163,14 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/04/data-type-php.jpg',
-    nature: Nature.Entertaining,
+        'https://cdn.pixabay.com/photo/2019/06/22/18/31/love-4292211_960_720.jpg',
+    nature: Nature.hard,
   ),
   News(
     id: 'b6',
-    categories: ['c9'],
+    categories: [
+      'c9',
+    ],
     title: 'New hair style and no heels',
     detail: '''Richard McClintock, a Latin professor at Hampden-Sydney 
     College in Virginia, looked up one of the more obscure Latin words, 
@@ -112,7 +184,7 @@ const DUMMY_NEWS = const [
        "Lorem ipsum dolor sit amet..", comes from a line in section
         1.10.32.''',
     imageURL:
-        'https://sanjibsinha.com/wp-content/uploads/2021/04/associative-array-in-php.jpg',
-    nature: Nature.Political,
+        'https://cdn.pixabay.com/photo/2019/09/20/20/13/sea-4492536_960_720.jpg',
+    nature: Nature.soft,
   ),
 ];

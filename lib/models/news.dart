@@ -1,8 +1,6 @@
 enum Nature {
-  Entertaining,
-  Hard,
-  Political,
-  Crime,
+  hard,
+  soft,
 }
 
 class News {
