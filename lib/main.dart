@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/views/about_screen.dart';
 import '../views/tabs_screen.dart';
 import '../views/category_news_screen.dart';
 import '../views/news_detail_screen.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/', // default is '/'
       routes: {
         '/': (ctx) => TabsScreen(),
+        AboutScreen.routeName: (ctx) => const AboutScreen(),
         CategoryNewsScreen.routeName: (ctx) => const CategoryNewsScreen(),
         NewsDetailScreen.routeName: (ctx) => const NewsDetailScreen(),
       },
