@@ -17,6 +17,7 @@ class AboutScreen extends StatelessWidget {
           child: Text(
             'This is About Us Page',
             style: TextStyle(
+              fontFamily: 'Allison',
               fontSize: 30.0,
               fontWeight: FontWeight.bold,
             ),

@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
             ),
             bodyText1: const TextStyle(
               color: Color.fromRGBO(20, 51, 51, 1),
+              fontFamily: 'Allison',
+              fontSize: 50.0,
             ),
             headline6: const TextStyle(
               fontSize: 20,

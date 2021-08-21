@@ -72,7 +72,8 @@ class NewsItem extends StatelessWidget {
                     child: Text(
                       title,
                       style: const TextStyle(
-                        fontSize: 26,
+                        fontFamily: 'Allison',
+                        fontSize: 46.0,
                         color: Colors.white,
                       ),
                       softWrap: true,
